@@ -1,0 +1,62 @@
+/*global*/
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Arial;
+}
+img{
+    max-width: 100%;
+}
+a{
+    text-decoration: none;
+}
+/*utilities*/
+.container{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.main-text{
+    font-weight: 900;
+    font-size: 55px;
+    line-height: 1;
+    letter-spacing: 1px;
+}
+.secondary-text{
+    font-weight: 700;
+    font-size: 24px;
+}
+.normal-text{
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+.centered-text{
+    text-align: center;
+}
+.btn{
+    display: block;
+    width: 200px;
+    background-color: black;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 20px;
+}
+/*header*/
+.site-header{
+    background-color: #ffcc08;
+}
+.site-header h1{
+    font-weight: 300;
+    font-size: 40px;
+}
+nav a{
+    color: black;
+    font-weight: 300;
+    font-size: 24px;
+    margin-right: 20px;
+}
