@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/main.css">
+    <title>Register</title>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container flex-container margin-b30">
+            <h1>The Fancy Pet</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="register.html">Register</a>
+            </nav>
+        </div>
+    </header>
+    <div id="notification" class="notification">
+        <span id="closeNotification" class="close">x</span>
+        <p id="notificationText">This is dynamic text</p>
+    </div>
+
+    <main class="container">
+        <h2 class="secondary-text centered-text">Register a new pet</h2>
+        <div>
+            <div class="input-control">
+                <label>Name*</label>
+                <input type="text" id="txtName">
+            </div>
+            <div class="input-control">
+                <label>Age</label>
+                <input type="text" id="txtAge">
+            </div>
+            <div class="input-control">
+                <label>Gender</label>
+                <input type="text" id="txtGender">
+            </div>
+            <div class="input-control">
+                <label>Type</label>
+                <select id="txtType">
+                    <option value="" option disabled>---Select an option ---</option>
+                    <option value="Dog">Dog</option>
+                    <option value="Cat">Cat</option>
+                    <option value="Bird">Bird</option>
+                    <option value="Hamster">Hamster</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="input-control">
+                <label>Breed</label>
+                <input type="text" id="txtBreed">
+            </div>
+            <div class="input-control">
+                <label>Service*</label>
+                <select id="txtService">
+                    <option value="" option disabled>---Select an option ---</option>
+                    <option value="Grooming">Grooming</option>
+                    <option value="Vaccines">Vaccines</option>
+                    <option value="Hotel">Hotel</option>
+                </select>
+            </div>
+            <!--use select-->
+            <div>
+                <div class="btn-container">
+                    <button class="btn" onclick="register();">Register</button>
+                </div>
+                <div>
+                <img class="pic" src="img/pets looking.webp" alt="pets-peeking">
+                </div>
+            </div>
+        </div>
+    </main>
+    <div id="petList"></div>
+    <div class="container petsInfo">
+        <h4 class="light-text">Pets information</h4>
+        <label>Total: <span id="totalPets"></span></label>
+        <div>
+            <label class="cursor" id="dogBtn">🐶: <span id="totalDog">0</span></label>
+            <label class="cursor" id="catBtn">🐱: <span id="totalCat">0</span></label>
+            <label class="cursor" id="birdBtn">🐦: <span id="totalBird">0</span></label>
+            <label class="cursor" id="hamsterBtn">🐹: <span id="totalHamster">0</span></label>
+            <label class="cursor" id="otherBtn">Other: <span id="totalOther">0</span></label>
+        </div>
+        <div>
+            <label>🧼: <span id="totalGrooming">0</span></label>
+            <label>💉: <span id="totalVaccines">0</span></label>
+            <label>🏨: <span id="totalHotel">0</span></label>
+        </div>
+    </div>
+    <div class="container" id="pets"></div>
+    <!--create the form-->
+    <div class="container">
+    <table class="table table-striped">
+        <thead>
+            <!-- all the headers-->
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Type</th>
+                <th>Breed</th>
+                <th>Service</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="petTable">
+            <!--inject the rows-->
+        </tbody>
+    </table>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <h3 class="bold-text">Follow us on Social media!</h3>
+            <div class="socials">
+                <a href="#"><i class="fa-brands fa-facebook"></i> The Fancy Pet</a>
+                <a href="#"><i class="fa-brands fa-instagram"></i> The_Fancy_Pet</a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i> TheFancyPet</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./plugins/jquery3.7.1.js"></script>
+    <script src="./script/displayServices.js"></script>
+    <script src="./script/register.js"></script>
+    <script src="./script/display.js"></script>
+    <script src="https://kit.fontawesome.com/b01e4a0084.js" crossorigin="anonymous"></script>
+</body>
+</html>

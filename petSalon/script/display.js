@@ -44,7 +44,7 @@ function displayRows(){
         <td>${pet.type}</td>
         <td>${pet.breed}</td>
         <td>${pet.service}</td>
-        <td><button class="btn btn-danger" onclick="deletePet(${i});">x</button></td>
+        <td><button class="action-btn" onclick="deletePet(${i});">x</button></td>
     </tr>
     `;
     }
@@ -109,4 +109,17 @@ function displayServiceCount(){
             //hotel
         }
     }
+}
+function displayServices(){
+    const TABLE = document.getElementById("servicesTable");
+    row="";
+    for(let i=0;i<newServices.services.length;i++){
+        let services = newServices.services[i];
+    row+=`
+    <tr id="${i}" class="">
+        <td>${services.description}</td>
+        <td>$${services.price}</td>
+    `;
+    }
+    TABLE.innerHTML=row;
 }
