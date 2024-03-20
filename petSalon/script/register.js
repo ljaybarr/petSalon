@@ -86,6 +86,16 @@ function hideNotification(){
     $("#notification").hide();
 }
 
+function getServices(){
+    let serviceList = readItem();
+    for(let i=0; i<serviceList.length; i++){
+        let service = serviceList[i];
+        $("#txtService").append(
+            `<option value="${service.description}">${service.description}</option>`
+        );
+    }
+}
+
 function init(){
 
     $("#closeNotification").click(hideNotification);
@@ -101,6 +111,7 @@ function init(){
     displayTotalAmountPets();
     displayPetType();
     displayServiceCount();
+    getServices();
 
     inputName = document.getElementById("txtName");
     inputAge = document.getElementById("txtAge");

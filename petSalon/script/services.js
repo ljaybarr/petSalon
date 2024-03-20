@@ -12,11 +12,16 @@ function services(description,price){
 function register(){
     let newService = new services(inputDescription.value, inputPrice.value);
     if(isValid(newService)){
+        saveItem(newService);
         newServices.services.push(newService);
         displayServices();
+        readItem();
         clearForm();
     }
 
+}
+function displayItem(){
+    let item = readItems();
 }
 
 function isValid(services){
@@ -38,11 +43,8 @@ function clearForm(){
 
 function init(){
 
-    let service1 = new services("Grooming", 25);
-    let service2 = new services("Vaccines", 50);
-    let service3 = new services("Hotel", 100);
-    newServices.services.push(service1, service2, service3);
     displayServices();
+    readItem();
 
     inputDescription = document.getElementById("txtDescription");
     inputPrice = document.getElementById("txtPrice");
